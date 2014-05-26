@@ -1,0 +1,72 @@
+[26/May/2014 08:04:09 +0000] views        ERROR    No se ha podido crear el directorio de inicio.
+Traceback (most recent call last):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/core/src/desktop/auth/views.py", line 109, in dt_login
+    ensure_home_directory(request.fs, user.username)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/useradmin/src/useradmin/views.py", line 383, in ensure_home_directory
+    fs.do_as_user(username, fs.create_home_dir, home_dir)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 654, in do_as_user
+    return fn(*args, **kwargs)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/hadoopfs.py", line 241, in create_home_dir
+    if not self.exists(home_path):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 211, in exists
+    return self._stats(path) is not None
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 199, in _stats
+    raise ex
+WebHdfsException: <urlopen error [Errno 111] Connection refused>
+[26/May/2014 08:04:10 +0000] webhdfs      ERROR    Failed to determine superuser of WebHdfs at http://localhost:50070/webhdfs/v1: <urlopen error [Errno 111] Connection refused>
+Traceback (most recent call last):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 111, in superuser
+    sb = self.stats('/')
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 205, in stats
+    res = self._stats(path)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 199, in _stats
+    raise ex
+WebHdfsException: <urlopen error [Errno 111] Connection refused>
+[26/May/2014 08:04:10 +0000] views        ERROR    Error in config validation by liboozie: <urlopen error [Errno 111] Connection refused>
+Traceback (most recent call last):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/core/src/desktop/views.py", line 360, in _get_config_errors
+    error_list.extend(validator(request.user))
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/liboozie/src/liboozie/conf.py", line 77, in config_validator
+    message=_('Oozie Share Lib not installed in default location.')))
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/core/src/desktop/lib/conf.py", line 626, in validate_path
+    if path is None or not fs.exists(path):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 211, in exists
+    return self._stats(path) is not None
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 199, in _stats
+    raise ex
+WebHdfsException: <urlopen error [Errno 111] Connection refused>
+[26/May/2014 08:06:48 +0000] webhdfs      ERROR    Failed to determine superuser of WebHdfs at http://localhost:50070/webhdfs/v1: <urlopen error [Errno 111] Connection refused>
+Traceback (most recent call last):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 111, in superuser
+    sb = self.stats('/')
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 205, in stats
+    res = self._stats(path)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 199, in _stats
+    raise ex
+WebHdfsException: <urlopen error [Errno 111] Connection refused>
+[26/May/2014 08:06:48 +0000] views        ERROR    Error in config validation by liboozie: <urlopen error [Errno 111] Connection refused>
+Traceback (most recent call last):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/core/src/desktop/views.py", line 360, in _get_config_errors
+    error_list.extend(validator(request.user))
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/liboozie/src/liboozie/conf.py", line 77, in config_validator
+    message=_('Oozie Share Lib not installed in default location.')))
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/core/src/desktop/lib/conf.py", line 626, in validate_path
+    if path is None or not fs.exists(path):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 211, in exists
+    return self._stats(path) is not None
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 199, in _stats
+    raise ex
+WebHdfsException: <urlopen error [Errno 111] Connection refused>
+[26/May/2014 08:10:55 +0000] views        ERROR    must be string or buffer, not None
+[26/May/2014 08:10:55 +0000] views        ERROR    must be string or buffer, not None
+[26/May/2014 08:10:55 +0000] views        ERROR    must be string or buffer, not None
+[26/May/2014 08:10:55 +0000] views        ERROR    must be string or buffer, not None
+[26/May/2014 08:15:31 +0000] thrift_util  ERROR    Thrift saw exception (this may be expected).
+Traceback (most recent call last):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/core/src/desktop/lib/thrift_util.py", line 348, in wrapper
+    ret = res(*args, **kwargs)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/../../gen-py/TCLIService/TCLIService.py", line 634, in GetLog
+    return self.recv_GetLog()
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/../../gen-py/TCLIService/TCLIService.py", line 650, in recv_GetLog
+    raise x
+TApplicationException: Invalid method name: 'GetLog'

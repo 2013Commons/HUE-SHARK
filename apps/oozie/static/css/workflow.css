@@ -1,0 +1,155 @@
+ul {
+  list-style-type: none;
+}
+
+#modal-window .modal-content {
+  height: 300px;
+  overflow: auto;
+}
+
+#node-modal {
+  width: auto;
+}
+
+#node-modal .modal-content {
+  background: white;
+  max-height: 500px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 5px;
+}
+
+.action {
+  border: 1px solid #DDD;
+  padding: 0px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.action h4 {
+  margin-bottom: 1px;
+}
+
+.node-action {
+  background: #FFF url(/oozie/static/art/action.png) no-repeat 10px 10px;
+}
+
+.node-fork {
+  background: #FFF url(/oozie/static/art/fork.png) no-repeat 10px 10px;
+}
+
+.node-join {
+  background: #FFF url(/oozie/static/art/join.png) no-repeat 10px 10px;
+}
+
+.node-decision {
+  background: #FFF url(/oozie/static/art/decision.png) no-repeat 10px 10px;
+}
+
+.node-decisionend {
+  background: #FFF url(/oozie/static/art/decision_end.png) no-repeat 10px 10px;
+}
+
+.node-link {
+  border: 1px dashed #DDD;
+  margin: 10px;
+  background: url(/oozie/static/art/droppable.png) no-repeat 50% 50%;
+}
+
+.node-description {
+  padding-top: 10px;
+}
+
+.node-action-bar {
+  background-color: #EEE;
+  padding-top: 5px;
+  margin-top: 10px;
+  -webkit-box-shadow: inset 0px 3px 5px 0px #DDD;
+  box-shadow: inset 0px 3px 5px 0px #DDD;
+}
+
+#graph, #new-node {
+  text-align: center;
+}
+
+.node-link-hover {
+  background: #D9EDF7;
+}
+
+.node-action-hover {
+  background: #D9EDF7;
+}
+
+.node-fork-hover {
+  background: #EEE;
+}
+
+.popover {
+  z-index: 2060 !important;
+  margin-left: 166px!important;
+}
+
+.control-group.error .CodeMirror {
+  border: 1px solid #B94A48;
+}
+
+.new-node-link {
+  text-align: left;
+  cursor: move;
+}
+
+.sidebar-nav {
+  padding: 9px 0;
+}
+
+#workflow {
+  margin-bottom: 80px;
+}
+
+#actionToolbar {
+  z-index: 1000;
+  padding: 4px;
+  padding-bottom: 8px;
+}
+
+#actionToolbar.shadowed {
+  -webkit-box-shadow: 0px 3px 5px rgba(150, 150, 150, 0.15);
+  -moz-box-shadow: 0px 3px 5px rgba(150, 150, 150, 0.15);
+  box-shadow: 0px 3px 5px rgba(150, 150, 150, 0.15);
+}
+
+#actionToolbar h5 {
+  margin-left: 10px;
+}
+
+.form-horizontal .form-actions {
+  padding-left: 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  margin-bottom: 0;
+  -webkit-box-shadow: 0px -1px 3px rgba(50, 50, 50, 0.15);
+  -moz-box-shadow: 0px -1px 3px rgba(50, 50, 50, 0.15);
+  box-shadow: 0px -1px 3px rgba(50, 50, 50, 0.15);
+  z-index: 1020;
+  margin-left: -20px;
+}
+
+.draggable-button {
+  display: inline;
+  margin: 1px;
+  line-height: 40px;
+}
+
+.draggable-button a {
+  padding: 8px;
+}
+
+.typeahead {
+  z-index: 2000;
+}
+
+#importAction .action-row, #importOozieAction .action-row {
+  cursor: pointer;
+}

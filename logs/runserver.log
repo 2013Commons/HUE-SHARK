@@ -1,0 +1,256 @@
+[26/May/2014 17:03:52 +0000] settings     INFO     Welcome to Hue 2.5.0
+[26/May/2014 17:03:52 +0000] settings     WARNING  secret_key should be configured
+[26/May/2014 08:03:53 +0000] settings     INFO     Welcome to Hue 2.5.0
+[26/May/2014 08:03:53 +0000] settings     WARNING  secret_key should be configured
+[26/May/2014 08:04:01 +0000] middleware   INFO     Unloading SpnegoMiddleware
+[26/May/2014 08:04:01 +0000] middleware   INFO     Unloading HueRemoteUserMiddleware
+[26/May/2014 08:04:02 +0000] middleware   INFO     Redirecting to login page: /beeswax/
+[26/May/2014 08:04:02 +0000] access       INFO     127.0.0.1 -anon- - "GET /beeswax/ HTTP/1.1" -- login redirection
+[26/May/2014 08:04:09 +0000] backend      INFO     Materializing user ahll11@hotmail.com in the database
+[26/May/2014 08:04:09 +0000] backend      INFO     Augmenting users with class: <class 'desktop.auth.backend.DefaultUserAugmentor'>
+[26/May/2014 08:04:09 +0000] views        ERROR    No se ha podido crear el directorio de inicio.
+Traceback (most recent call last):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/core/src/desktop/auth/views.py", line 109, in dt_login
+    ensure_home_directory(request.fs, user.username)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/useradmin/src/useradmin/views.py", line 383, in ensure_home_directory
+    fs.do_as_user(username, fs.create_home_dir, home_dir)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 654, in do_as_user
+    return fn(*args, **kwargs)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/hadoopfs.py", line 241, in create_home_dir
+    if not self.exists(home_path):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 211, in exists
+    return self._stats(path) is not None
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 199, in _stats
+    raise ex
+WebHdfsException: <urlopen error [Errno 111] Connection refused>
+[26/May/2014 08:04:09 +0000] access       WARNING  127.0.0.1 ahll11@hotmail.com - "POST /accounts/login/ HTTP/1.1" -- "ahll11@hotmail.com" login ok
+[26/May/2014 08:04:09 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/ HTTP/1.1"
+[26/May/2014 08:04:09 +0000] thrift_util  INFO     Thrift exception; retrying: Could not connect to localhost:8003
+[26/May/2014 08:04:09 +0000] thrift_util  INFO     Thrift exception; retrying: Could not connect to localhost:8003
+[26/May/2014 08:04:09 +0000] thrift_util  WARNING  Out of retries for thrift call: get_all_databases
+[26/May/2014 08:04:09 +0000] thrift_util  INFO     Thrift saw a transport exception: Could not connect to localhost:8003
+[26/May/2014 08:04:09 +0000] middleware   INFO     Processing exception: Could not connect to localhost:8003 (code THRIFTTRANSPORT): TTransportException('Could not connect to localhost:8003',): Traceback (most recent call last):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/build/env/lib/python2.7/site-packages/Django-1.2.3-py2.7.egg/django/core/handlers/base.py", line 100, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/views.py", line 57, in index
+    return execute_query(request)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/views.py", line 382, in execute_query
+    databases = _get_db_choices(request)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/views.py", line 1343, in _get_db_choices
+    dbs = db.get_databases()
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/server/dbms.py", line 122, in get_databases
+    return self.client.get_databases()
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/server/beeswax_lib.py", line 130, in get_databases
+    return self.meta_client.get_all_databases()
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/core/src/desktop/lib/thrift_util.py", line 305, in wrapper
+    raise StructuredThriftTransportException(e, error_code=502)
+StructuredThriftTransportException: Could not connect to localhost:8003 (code THRIFTTRANSPORT): TTransportException('Could not connect to localhost:8003',)
+
+[26/May/2014 08:04:10 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /debug/check_config_ajax HTTP/1.1"
+[26/May/2014 08:04:10 +0000] webhdfs      ERROR    Failed to determine superuser of WebHdfs at http://localhost:50070/webhdfs/v1: <urlopen error [Errno 111] Connection refused>
+Traceback (most recent call last):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 111, in superuser
+    sb = self.stats('/')
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 205, in stats
+    res = self._stats(path)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 199, in _stats
+    raise ex
+WebHdfsException: <urlopen error [Errno 111] Connection refused>
+[26/May/2014 08:04:10 +0000] webhdfs      INFO     WebHdfs at http://localhost:50070/webhdfs/v1 -- Validation error: <urlopen error [Errno 111] Connection refused>
+[26/May/2014 08:04:10 +0000] thrift_util  INFO     Thrift exception; retrying: Could not connect to localhost:9290
+[26/May/2014 08:04:10 +0000] thrift_util  INFO     Thrift exception; retrying: Could not connect to localhost:9290
+[26/May/2014 08:04:10 +0000] thrift_util  WARNING  Out of retries for thrift call: getRuntimeInfo
+[26/May/2014 08:04:10 +0000] thrift_util  INFO     Thrift saw a transport exception: Could not connect to localhost:9290
+[26/May/2014 08:04:10 +0000] views        ERROR    Error in config validation by liboozie: <urlopen error [Errno 111] Connection refused>
+Traceback (most recent call last):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/core/src/desktop/views.py", line 360, in _get_config_errors
+    error_list.extend(validator(request.user))
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/liboozie/src/liboozie/conf.py", line 77, in config_validator
+    message=_('Oozie Share Lib not installed in default location.')))
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/core/src/desktop/lib/conf.py", line 626, in validate_path
+    if path is None or not fs.exists(path):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 211, in exists
+    return self._stats(path) is not None
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 199, in _stats
+    raise ex
+WebHdfsException: <urlopen error [Errno 111] Connection refused>
+[26/May/2014 08:04:10 +0000] thrift_util  INFO     Thrift exception; retrying: Could not connect to localhost:8003
+[26/May/2014 08:04:10 +0000] thrift_util  INFO     Thrift exception; retrying: Could not connect to localhost:8003
+[26/May/2014 08:04:10 +0000] thrift_util  WARNING  Out of retries for thrift call: get_all_databases
+[26/May/2014 08:04:10 +0000] thrift_util  INFO     Thrift saw a transport exception: Could not connect to localhost:8003
+[26/May/2014 08:04:10 +0000] thrift_util  INFO     Thrift exception; retrying: Could not connect to localhost:21050
+[26/May/2014 08:04:10 +0000] thrift_util  INFO     Thrift exception; retrying: Could not connect to localhost:21050
+[26/May/2014 08:04:10 +0000] thrift_util  WARNING  Out of retries for thrift call: OpenSession
+[26/May/2014 08:04:10 +0000] thrift_util  INFO     Thrift saw a transport exception: Could not connect to localhost:21050
+[26/May/2014 08:04:15 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/ HTTP/1.1"
+[26/May/2014 08:04:15 +0000] thrift_util  INFO     Thrift exception; retrying: Could not connect to localhost:8003
+[26/May/2014 08:04:15 +0000] thrift_util  INFO     Thrift exception; retrying: Could not connect to localhost:8003
+[26/May/2014 08:04:15 +0000] thrift_util  WARNING  Out of retries for thrift call: get_all_databases
+[26/May/2014 08:04:15 +0000] thrift_util  INFO     Thrift saw a transport exception: Could not connect to localhost:8003
+[26/May/2014 08:04:15 +0000] middleware   INFO     Processing exception: Could not connect to localhost:8003 (code THRIFTTRANSPORT): TTransportException('Could not connect to localhost:8003',): Traceback (most recent call last):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/build/env/lib/python2.7/site-packages/Django-1.2.3-py2.7.egg/django/core/handlers/base.py", line 100, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/views.py", line 57, in index
+    return execute_query(request)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/views.py", line 382, in execute_query
+    databases = _get_db_choices(request)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/views.py", line 1343, in _get_db_choices
+    dbs = db.get_databases()
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/server/dbms.py", line 122, in get_databases
+    return self.client.get_databases()
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/server/beeswax_lib.py", line 130, in get_databases
+    return self.meta_client.get_all_databases()
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/core/src/desktop/lib/thrift_util.py", line 305, in wrapper
+    raise StructuredThriftTransportException(e, error_code=502)
+StructuredThriftTransportException: Could not connect to localhost:8003 (code THRIFTTRANSPORT): TTransportException('Could not connect to localhost:8003',)
+
+[26/May/2014 08:04:15 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /debug/check_config_ajax HTTP/1.1"
+[26/May/2014 08:04:18 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/ HTTP/1.1"
+[26/May/2014 08:04:18 +0000] thrift_util  INFO     Thrift exception; retrying: Could not connect to localhost:8003
+[26/May/2014 08:04:18 +0000] thrift_util  INFO     Thrift exception; retrying: Could not connect to localhost:8003
+[26/May/2014 08:04:18 +0000] thrift_util  WARNING  Out of retries for thrift call: get_all_databases
+[26/May/2014 08:04:18 +0000] thrift_util  INFO     Thrift saw a transport exception: Could not connect to localhost:8003
+[26/May/2014 08:04:18 +0000] middleware   INFO     Processing exception: Could not connect to localhost:8003 (code THRIFTTRANSPORT): TTransportException('Could not connect to localhost:8003',): Traceback (most recent call last):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/build/env/lib/python2.7/site-packages/Django-1.2.3-py2.7.egg/django/core/handlers/base.py", line 100, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/views.py", line 57, in index
+    return execute_query(request)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/views.py", line 382, in execute_query
+    databases = _get_db_choices(request)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/views.py", line 1343, in _get_db_choices
+    dbs = db.get_databases()
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/server/dbms.py", line 122, in get_databases
+    return self.client.get_databases()
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/server/beeswax_lib.py", line 130, in get_databases
+    return self.meta_client.get_all_databases()
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/core/src/desktop/lib/thrift_util.py", line 305, in wrapper
+    raise StructuredThriftTransportException(e, error_code=502)
+StructuredThriftTransportException: Could not connect to localhost:8003 (code THRIFTTRANSPORT): TTransportException('Could not connect to localhost:8003',)
+
+[26/May/2014 08:04:18 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /debug/check_config_ajax HTTP/1.1"
+[26/May/2014 17:06:41 +0000] settings     INFO     Welcome to Hue 2.5.0
+[26/May/2014 17:06:41 +0000] settings     WARNING  secret_key should be configured
+[26/May/2014 08:06:42 +0000] settings     INFO     Welcome to Hue 2.5.0
+[26/May/2014 08:06:42 +0000] settings     WARNING  secret_key should be configured
+[26/May/2014 08:06:47 +0000] middleware   INFO     Unloading SpnegoMiddleware
+[26/May/2014 08:06:47 +0000] middleware   INFO     Unloading HueRemoteUserMiddleware
+[26/May/2014 08:06:47 +0000] backend      INFO     Augmenting users with class: <class 'desktop.auth.backend.DefaultUserAugmentor'>
+[26/May/2014 08:06:47 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/ HTTP/1.1"
+[26/May/2014 08:06:47 +0000] hive_server2_lib INFO     Opening session THandleIdentifier(secret='\x1d\r\xe9\x91\xe3%JM\x97\xbd%a\xa8c/\x06', guid='\xbc4nu\x0e\xabKR\xbev\xcb\x18_\xd4n:')
+[26/May/2014 08:06:48 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/configuration HTTP/1.1"
+[26/May/2014 08:06:48 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /debug/check_config_ajax HTTP/1.1"
+[26/May/2014 08:06:48 +0000] webhdfs      ERROR    Failed to determine superuser of WebHdfs at http://localhost:50070/webhdfs/v1: <urlopen error [Errno 111] Connection refused>
+Traceback (most recent call last):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 111, in superuser
+    sb = self.stats('/')
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 205, in stats
+    res = self._stats(path)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 199, in _stats
+    raise ex
+WebHdfsException: <urlopen error [Errno 111] Connection refused>
+[26/May/2014 08:06:48 +0000] webhdfs      INFO     WebHdfs at http://localhost:50070/webhdfs/v1 -- Validation error: <urlopen error [Errno 111] Connection refused>
+[26/May/2014 08:06:48 +0000] thrift_util  INFO     Thrift exception; retrying: Could not connect to localhost:9290
+[26/May/2014 08:06:48 +0000] thrift_util  INFO     Thrift exception; retrying: Could not connect to localhost:9290
+[26/May/2014 08:06:48 +0000] thrift_util  WARNING  Out of retries for thrift call: getRuntimeInfo
+[26/May/2014 08:06:48 +0000] thrift_util  INFO     Thrift saw a transport exception: Could not connect to localhost:9290
+[26/May/2014 08:06:48 +0000] views        ERROR    Error in config validation by liboozie: <urlopen error [Errno 111] Connection refused>
+Traceback (most recent call last):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/core/src/desktop/views.py", line 360, in _get_config_errors
+    error_list.extend(validator(request.user))
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/liboozie/src/liboozie/conf.py", line 77, in config_validator
+    message=_('Oozie Share Lib not installed in default location.')))
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/core/src/desktop/lib/conf.py", line 626, in validate_path
+    if path is None or not fs.exists(path):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 211, in exists
+    return self._stats(path) is not None
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/libs/hadoop/src/hadoop/fs/webhdfs.py", line 199, in _stats
+    raise ex
+WebHdfsException: <urlopen error [Errno 111] Connection refused>
+[26/May/2014 08:06:48 +0000] thrift_util  INFO     Thrift exception; retrying: Could not connect to localhost:21050
+[26/May/2014 08:06:48 +0000] thrift_util  INFO     Thrift exception; retrying: Could not connect to localhost:21050
+[26/May/2014 08:06:48 +0000] thrift_util  WARNING  Out of retries for thrift call: OpenSession
+[26/May/2014 08:06:48 +0000] thrift_util  INFO     Thrift saw a transport exception: Could not connect to localhost:21050
+[26/May/2014 08:06:48 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/autocomplete/default/ HTTP/1.1"
+[26/May/2014 08:07:06 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "POST /beeswax/ HTTP/1.1"
+[26/May/2014 08:07:06 +0000] views        INFO     Saved auto  design "My saved query" (id 1) for ahll11@hotmail.com
+[26/May/2014 08:07:08 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/configuration HTTP/1.1"
+[26/May/2014 08:07:08 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /debug/check_config_ajax HTTP/1.1"
+[26/May/2014 08:07:08 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/autocomplete/default/ HTTP/1.1"
+[26/May/2014 08:07:56 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "POST /beeswax/execute/1 HTTP/1.1"
+[26/May/2014 08:07:57 +0000] views        INFO     Saved auto  design "My saved query" (id 2) for ahll11@hotmail.com
+[26/May/2014 08:07:57 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/configuration HTTP/1.1"
+[26/May/2014 08:07:57 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /debug/check_config_ajax HTTP/1.1"
+[26/May/2014 08:07:57 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/autocomplete/default/ HTTP/1.1"
+[26/May/2014 08:09:29 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "POST /beeswax/execute/2 HTTP/1.1"
+[26/May/2014 08:09:29 +0000] thrift_util  INFO     Thrift saw a transport exception: Could not connect to localhost:10000
+[26/May/2014 08:09:29 +0000] middleware   INFO     Processing exception: Could not connect to localhost:10000 (code THRIFTTRANSPORT): TTransportException('Could not connect to localhost:10000',): Traceback (most recent call last):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/build/env/lib/python2.7/site-packages/Django-1.2.3-py2.7.egg/django/core/handlers/base.py", line 100, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/views.py", line 382, in execute_query
+    databases = _get_db_choices(request)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/views.py", line 1343, in _get_db_choices
+    dbs = db.get_databases()
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/server/dbms.py", line 122, in get_databases
+    return self.client.get_databases()
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/server/hive_server2_lib.py", line 630, in get_databases
+    return [table[col] for table in self._client.get_databases()]
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/server/hive_server2_lib.py", line 353, in get_databases
+    res = self.call(self._client.GetSchemas, req)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/server/hive_server2_lib.py", line 323, in call
+    res = fn(req)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/core/src/desktop/lib/thrift_util.py", line 305, in wrapper
+    raise StructuredThriftTransportException(e, error_code=502)
+StructuredThriftTransportException: Could not connect to localhost:10000 (code THRIFTTRANSPORT): TTransportException('Could not connect to localhost:10000',)
+
+[26/May/2014 08:09:29 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /debug/check_config_ajax HTTP/1.1"
+[26/May/2014 08:09:59 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "POST /beeswax/execute/1 HTTP/1.1"
+[26/May/2014 08:09:59 +0000] hive_server2_lib INFO     Retrying with a new session because of TGetSchemasResp(status=TStatus(errorCode=0, errorMessage='Invalid SessionHandle: SessionHandle [bc346e75-0eab-4b52-be76-cb185fd46e3a]', sqlState=None, infoMessages=None, statusCode=3), operationHandle=None)
+[26/May/2014 08:09:59 +0000] hive_server2_lib INFO     Opening session THandleIdentifier(secret='\x9cC\xe1\xfeFwA\x15\xa0\x18s={ZQ\xcd', guid='\x93\xa8AL\x1c\xabE\xc4\xb0\xeb\x00\x02X-\x9a\x14')
+[26/May/2014 08:09:59 +0000] views        INFO     Saved auto  design "My saved query" (id 3) for ahll11@hotmail.com
+[26/May/2014 08:10:01 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/configuration HTTP/1.1"
+[26/May/2014 08:10:01 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /debug/check_config_ajax HTTP/1.1"
+[26/May/2014 08:10:01 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/autocomplete/default/ HTTP/1.1"
+[26/May/2014 08:10:44 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "POST /beeswax/execute/1 HTTP/1.1"
+[26/May/2014 08:10:44 +0000] views        INFO     Saved auto  design "My saved query" (id 4) for ahll11@hotmail.com
+[26/May/2014 08:10:45 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/configuration HTTP/1.1"
+[26/May/2014 08:10:45 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /debug/check_config_ajax HTTP/1.1"
+[26/May/2014 08:10:45 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/autocomplete/default/ HTTP/1.1"
+[26/May/2014 08:10:55 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/my_queries HTTP/1.1"
+[26/May/2014 08:10:55 +0000] views        ERROR    must be string or buffer, not None
+[26/May/2014 08:10:55 +0000] views        ERROR    must be string or buffer, not None
+[26/May/2014 08:10:55 +0000] views        ERROR    must be string or buffer, not None
+[26/May/2014 08:10:55 +0000] views        ERROR    must be string or buffer, not None
+[26/May/2014 08:10:56 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /debug/check_config_ajax HTTP/1.1"
+[26/May/2014 08:11:01 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/execute/ HTTP/1.1"
+[26/May/2014 08:11:01 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/configuration HTTP/1.1"
+[26/May/2014 08:11:01 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /debug/check_config_ajax HTTP/1.1"
+[26/May/2014 08:11:01 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/autocomplete/default/ HTTP/1.1"
+[26/May/2014 08:11:11 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "POST /beeswax/execute/ HTTP/1.1"
+[26/May/2014 08:11:11 +0000] views        INFO     Saved auto  design "My saved query" (id 5) for ahll11@hotmail.com
+[26/May/2014 08:11:12 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/configuration HTTP/1.1"
+[26/May/2014 08:11:12 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /debug/check_config_ajax HTTP/1.1"
+[26/May/2014 08:11:12 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/autocomplete/default/ HTTP/1.1"
+[26/May/2014 08:13:43 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "POST /beeswax/execute/5 HTTP/1.1"
+[26/May/2014 08:13:43 +0000] hive_server2_lib INFO     Retrying with a new session because of TGetSchemasResp(status=TStatus(errorCode=0, errorMessage='Invalid SessionHandle: SessionHandle [93a8414c-1cab-45c4-b0eb-0002582d9a14]', sqlState=None, infoMessages=None, statusCode=3), operationHandle=None)
+[26/May/2014 08:13:43 +0000] hive_server2_lib INFO     Opening session THandleIdentifier(secret='\xed\x137\xd8*?@\xb4\x82o1\x96\x1f\xa0$p', guid='\x8c[\r\x90\xa8\xd8F\xae\x8f\x0fj|:\xc9\x8d>')
+[26/May/2014 08:13:43 +0000] views        INFO     Saved auto  design "My saved query" (id 6) for ahll11@hotmail.com
+[26/May/2014 08:13:45 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/configuration HTTP/1.1"
+[26/May/2014 08:13:45 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /debug/check_config_ajax HTTP/1.1"
+[26/May/2014 08:13:45 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/autocomplete/default/ HTTP/1.1"
+[26/May/2014 08:15:28 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "POST /beeswax/execute/6 HTTP/1.1"
+[26/May/2014 08:15:28 +0000] hive_server2_lib INFO     Retrying with a new session because of TGetSchemasResp(status=TStatus(errorCode=0, errorMessage='Invalid SessionHandle: SessionHandle [8c5b0d90-a8d8-46ae-8f0f-6a7c3ac98d3e]', sqlState=None, infoMessages=None, statusCode=3), operationHandle=None)
+[26/May/2014 08:15:29 +0000] hive_server2_lib INFO     Opening session THandleIdentifier(secret='\xe13\xf5E4\x1cC\xf3\xaa?x\xc5\xf95\x9b\x00', guid='\x8e1J\x8b>[I\x97\x9e\xcc\xf6\xcbx\x9f4:')
+[26/May/2014 08:15:29 +0000] views        INFO     Saved auto  design "My saved query" (id 7) for ahll11@hotmail.com
+[26/May/2014 08:15:30 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/watch/7 HTTP/1.1"
+[26/May/2014 08:15:31 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /beeswax/results/7/0 HTTP/1.1"
+[26/May/2014 08:15:31 +0000] thrift_util  ERROR    Thrift saw exception (this may be expected).
+Traceback (most recent call last):
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/desktop/core/src/desktop/lib/thrift_util.py", line 348, in wrapper
+    ret = res(*args, **kwargs)
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/../../gen-py/TCLIService/TCLIService.py", line 634, in GetLog
+    return self.recv_GetLog()
+  File "/home/ahll/Escritorio/shark-Hue/hue-2.5.0/apps/beeswax/src/beeswax/../../gen-py/TCLIService/TCLIService.py", line 650, in recv_GetLog
+    raise x
+TApplicationException: Invalid method name: 'GetLog'
+[26/May/2014 08:15:31 +0000] thrift_util  INFO     Thrift saw an application exception: Invalid method name: 'GetLog'
+[26/May/2014 08:15:31 +0000] access       INFO     127.0.0.1 ahll11@hotmail.com - "GET /debug/check_config_ajax HTTP/1.1"

@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: threadframe
+Version: 0.2
+Summary: Advanced thread debugging extension
+Home-page: http://www.majid.info/mylos/stories/2004/06/10/threadframe.html
+Author: Fazal Majid
+Author-email: threadframe@majid.info
+License: Python
+Description: Obtaining tracebacks on other threads than the current thread
+Keywords: threading,thread
+Platform: UNKNOWN

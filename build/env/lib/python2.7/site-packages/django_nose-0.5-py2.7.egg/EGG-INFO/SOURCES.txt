@@ -1,0 +1,7 @@
+setup.py
+django_nose/__init__.py
+django_nose/nose_runner.py
+django_nose.egg-info/PKG-INFO
+django_nose.egg-info/SOURCES.txt
+django_nose.egg-info/dependency_links.txt
+django_nose.egg-info/top_level.txt

@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: moxy
+Version: 1.0.0
+Summary: Django db backend for MySQL using MySQLdb and eventlet.db_pool
+Home-page: http://github.com/rtyler/django-moxy
+Author: R. Tyler Ballance
+Author-email: tyler@linux.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN

@@ -1,0 +1,160 @@
+# Spanish translations for Hue.
+# Copyright (C) 2012 Cloudera
+# This file is distributed under the same license as the Hue project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2013-07-15 22:12-0700\n"
+"PO-Revision-Date: 2012-07-30 18:50-0700\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+
+#: src/about/views.py:64
+msgid "POST request required."
+msgstr ""
+
+#: src/about/templates/admin_wizard.mako:22
+#: src/about/templates/admin_wizard.mako:29
+msgid "Quick Start"
+msgstr "Inicio rápido"
+
+#: src/about/templates/admin_wizard.mako:30
+msgid "Configuration"
+msgstr "Configuración"
+
+#: src/about/templates/admin_wizard.mako:31
+msgid "Server Logs"
+msgstr "Registros del servidor"
+
+#: src/about/templates/admin_wizard.mako:39
+msgid "Visit Hue website !"
+msgstr ""
+
+#: src/about/templates/admin_wizard.mako:48
+msgid "Quick Start Wizard"
+msgstr "Asistente de Inicio rápido"
+
+#: src/about/templates/admin_wizard.mako:60
+msgid "Step 1:"
+msgstr "Paso 1:"
+
+#: src/about/templates/admin_wizard.mako:60
+msgid "Check Configuration"
+msgstr "Comprobar configuración"
+
+#: src/about/templates/admin_wizard.mako:61
+msgid "Step 2:"
+msgstr "Paso 2:"
+
+#: src/about/templates/admin_wizard.mako:61
+msgid "Examples"
+msgstr "Ejemplos"
+
+#: src/about/templates/admin_wizard.mako:62
+msgid "Step 3:"
+msgstr "Paso 3:"
+
+#: src/about/templates/admin_wizard.mako:62
+msgid "Users"
+msgstr "Usuarios"
+
+#: src/about/templates/admin_wizard.mako:63
+msgid "Step 4:"
+msgstr "Paso 4:"
+
+#: src/about/templates/admin_wizard.mako:63
+msgid "Go !"
+msgstr "Ir"
+
+#: src/about/templates/admin_wizard.mako:73
+msgid "Check your current configuration"
+msgstr "Consulte su configuración actual"
+
+#: src/about/templates/admin_wizard.mako:85
+#, fuzzy
+msgid "HDFS Trash configuration"
+msgstr "Comprobar configuración"
+
+#: src/about/templates/admin_wizard.mako:90
+msgid "Trash is active."
+msgstr ""
+
+#: src/about/templates/admin_wizard.mako:92
+msgid ""
+"You can activate trash collection by setting fs.trash.interval in core-"
+"site.xml:"
+msgstr ""
+
+#: src/about/templates/admin_wizard.mako:110
+#, fuzzy
+msgid "Install all the application examples"
+msgstr "Instalar o volver a instalar los ejemplos de aplicación"
+
+#: src/about/templates/admin_wizard.mako:115
+#: src/about/templates/admin_wizard.mako:134
+#: src/about/templates/admin_wizard.mako:141
+#: src/about/templates/admin_wizard.mako:148
+#: src/about/templates/admin_wizard.mako:155
+#: src/about/templates/admin_wizard.mako:162
+msgid "Installing..."
+msgstr "Instalando..."
+
+#: src/about/templates/admin_wizard.mako:116
+msgid "All"
+msgstr ""
+
+#: src/about/templates/admin_wizard.mako:128
+#, fuzzy
+msgid "Install individual application examples"
+msgstr "Instalar o volver a instalar los ejemplos de aplicación"
+
+#: src/about/templates/admin_wizard.mako:178
+msgid "Go create or import users"
+msgstr "Crear o importar usuarios"
+
+#: src/about/templates/admin_wizard.mako:181
+msgid "User Admin"
+msgstr "Administrador de usuario"
+
+#: src/about/templates/admin_wizard.mako:192
+msgid "Anonymous usage analytics"
+msgstr ""
+
+#: src/about/templates/admin_wizard.mako:199
+msgid "How does it work?"
+msgstr ""
+
+#: src/about/templates/admin_wizard.mako:214
+msgid "Go use the apps"
+msgstr "Utilizar las aplicaciones"
+
+#: src/about/templates/admin_wizard.mako:217
+msgid "Hue Home"
+msgstr "Inicio de Hue"
+
+#: src/about/templates/admin_wizard.mako:224
+msgid "Back"
+msgstr "Volver"
+
+#: src/about/templates/admin_wizard.mako:225
+msgid "Next"
+msgstr "Siguiente"
+
+#: src/about/templates/admin_wizard.mako:255
+#: src/about/templates/admin_wizard.mako:273
+msgid "Examples refreshed"
+msgstr ""
+
+#: src/about/templates/admin_wizard.mako:337
+#, fuzzy
+msgid "Configuration updated"
+msgstr "Configuración"
+

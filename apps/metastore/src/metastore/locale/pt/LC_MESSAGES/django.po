@@ -1,0 +1,288 @@
+# Portuguese translations for Hue.
+# Copyright (C) 2012 Cloudera
+# This file is distributed under the same license as the Hue project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VERSÃO DO PROJECTO\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2013-07-15 22:12-0700\n"
+"PO-Revision-Date: 2012-07-30 18:51-0700\n"
+"Last-Translator: NOME COMPLETO <EMAIL@ADDRESS>\n"
+"Language-Team: pt <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+
+#: src/metastore/forms.py:48
+#: src/metastore/templates/describe_partitions.mako:47
+msgid "Path"
+msgstr "Caminho"
+
+#: src/metastore/forms.py:49
+msgid "Overwrite?"
+msgstr "Substituir?"
+
+#: src/metastore/forms.py:62
+#, python-format
+msgid "%(column_name)s (partition key with type %(column_type)s)"
+msgstr "%(column_name)s (partição principal com o tipo %(column_type)s)"
+
+#: src/metastore/views.py:74
+#, python-format
+msgid "Failed to remove %(databases)s.  Error: %(error)s"
+msgstr "Falha ao remover %(databases)s.  Erro: %(error)s"
+
+#: src/metastore/views.py:75 src/metastore/views.py:165
+msgid "Beeswax Error"
+msgstr "Erro do Beeswax"
+
+#: src/metastore/views.py:77
+msgid "Do you really want to delete the database(s)?"
+msgstr "Tem a certeza de que deseja realmente eliminar as bases de dados?"
+
+#: src/metastore/views.py:164
+#, python-format
+msgid "Failed to remove %(tables)s.  Error: %(error)s"
+msgstr "Falha ao remover %(tables)s.  Erro: %(error)s"
+
+#: src/metastore/views.py:167
+msgid "Do you really want to delete the table(s)?"
+msgstr "Tem a certeza de que deseja eliminar as tabelas?"
+
+#: src/metastore/views.py:181 src/metastore/views.py:191
+msgid "Cannot read table"
+msgstr "Não é possível ler a tabela"
+
+#: src/metastore/views.py:212
+msgid "Can't load the data: "
+msgstr "Não é possível carregar os dados: "
+
+#: src/metastore/views.py:233
+#, python-format
+msgid "Table '%(table)s' is not partitioned."
+msgstr "A tabela '%(table)s' não está particionada."
+
+#: src/metastore/templates/components.mako:24
+#: src/metastore/templates/databases.mako:23
+#: src/metastore/templates/databases.mako:26
+msgid "Databases"
+msgstr "Bases de dados"
+
+#: src/metastore/templates/databases.mako:33
+msgid "Create a new database"
+msgstr "Criar uma nova base de dados"
+
+#: src/metastore/templates/databases.mako:40
+msgid "Search for database name"
+msgstr ""
+
+#: src/metastore/templates/databases.mako:44
+msgid "Drop the selected databases"
+msgstr "Descartar as bases de dados seleccionadas"
+
+#: src/metastore/templates/databases.mako:44
+#: src/metastore/templates/describe_table.mako:65
+#: src/metastore/templates/tables.mako:55
+msgid "Drop"
+msgstr "Drop"
+
+#: src/metastore/templates/databases.mako:51
+msgid "Database Name"
+msgstr "Nome da base de dados"
+
+#: src/metastore/templates/databases.mako:78
+#: src/metastore/templates/tables.mako:90
+msgid "Confirm action"
+msgstr "Confirmar acção"
+
+#: src/metastore/templates/databases.mako:81
+#: src/metastore/templates/describe_table.mako:147
+#: src/metastore/templates/tables.mako:93
+#: src/metastore/templates/popups/load_data.mako:60
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: src/metastore/templates/databases.mako:82
+#: src/metastore/templates/tables.mako:94
+msgid "Yes"
+msgstr "Sim"
+
+#: src/metastore/templates/databases.mako:114
+#: src/metastore/templates/describe_table.mako:179
+#: src/metastore/templates/describe_table.mako:202
+#: src/metastore/templates/tables.mako:126
+msgid "No data available"
+msgstr "Nenhum dado disponível"
+
+#: src/metastore/templates/databases.mako:115
+#: src/metastore/templates/describe_table.mako:180
+#: src/metastore/templates/describe_table.mako:203
+#: src/metastore/templates/tables.mako:127
+msgid "No matching records"
+msgstr "Nenhum registo correspondente"
+
+#: src/metastore/templates/describe_partitions.mako:24
+#, python-format
+msgid "Table Partitions: %(tableName)s"
+msgstr "Partições de tabela: %(tableName)s"
+
+#: src/metastore/templates/describe_partitions.mako:27
+msgid "Partitions"
+msgstr "Partições"
+
+#: src/metastore/templates/describe_partitions.mako:34
+#: src/metastore/templates/describe_table.mako:62
+#: src/metastore/templates/tables.mako:40
+msgid "Actions"
+msgstr "Acções"
+
+#: src/metastore/templates/describe_partitions.mako:35
+msgid "Show Table"
+msgstr "Mostrar tabela"
+
+#: src/metastore/templates/describe_partitions.mako:67
+msgid "Table has no partitions."
+msgstr "A tabela não tem nenhuma partição."
+
+#: src/metastore/templates/describe_table.mako:26
+#: src/metastore/templates/tables.mako:53
+msgid "View"
+msgstr "Visualizar"
+
+#: src/metastore/templates/describe_table.mako:28
+#: src/metastore/templates/describe_table.mako:55
+msgid "Table"
+msgstr "Tabela"
+
+#: src/metastore/templates/describe_table.mako:30
+#, python-format
+msgid "%s : %s"
+msgstr "%s : %s"
+
+#: src/metastore/templates/describe_table.mako:36
+msgid "Name"
+msgstr "Nome"
+
+#: src/metastore/templates/describe_table.mako:37
+msgid "Type"
+msgstr "Tipo"
+
+#: src/metastore/templates/describe_table.mako:38
+msgid "Comment"
+msgstr "Comentário"
+
+#: src/metastore/templates/describe_table.mako:63
+msgid "Import Data"
+msgstr "Importar dados"
+
+#: src/metastore/templates/describe_table.mako:64
+#: src/metastore/templates/tables.mako:54
+msgid "Browse Data"
+msgstr "Procurar dados"
+
+#: src/metastore/templates/describe_table.mako:66
+msgid "View File Location"
+msgstr "Ver localização do ficheiro"
+
+#: src/metastore/templates/describe_table.mako:68
+msgid "Show Partitions"
+msgstr "Mostrar partições"
+
+#: src/metastore/templates/describe_table.mako:75
+msgid "Comment:"
+msgstr "Comentário:"
+
+#: src/metastore/templates/describe_table.mako:79
+msgid "Columns"
+msgstr "Colunas"
+
+#: src/metastore/templates/describe_table.mako:81
+msgid "Partition Columns"
+msgstr "Colunas de partição"
+
+#: src/metastore/templates/describe_table.mako:84
+msgid "Sample"
+msgstr "Amostra"
+
+#: src/metastore/templates/describe_table.mako:103
+msgid "Error!"
+msgstr "Erro!"
+
+#: src/metastore/templates/describe_table.mako:140
+msgid "Drop Table"
+msgstr "Soltar tabela"
+
+#: src/metastore/templates/describe_table.mako:148
+msgid "Yes, drop this table"
+msgstr "Sim, descartar a tabela"
+
+#: src/metastore/templates/tables.mako:23
+msgid "Tables"
+msgstr "Tabelas"
+
+#: src/metastore/templates/tables.mako:26
+#, python-format
+msgid "Database %s"
+msgstr "Base de dados %s"
+
+#: src/metastore/templates/tables.mako:33
+msgid "database"
+msgstr "base de dados"
+
+#: src/metastore/templates/tables.mako:41
+msgid "Create a new table from a file"
+msgstr "Criar nova tabela de um ficheiro"
+
+#: src/metastore/templates/tables.mako:42
+msgid "Create a new table manually"
+msgstr "Criar uma nova tabela manualmente"
+
+#: src/metastore/templates/tables.mako:49
+msgid "Search for table name"
+msgstr ""
+
+#: src/metastore/templates/tables.mako:53
+#: src/metastore/templates/tables.mako:54
+msgid "Browse the selected table"
+msgstr "Pesquisar a tabela seleccionada"
+
+#: src/metastore/templates/tables.mako:55
+msgid "Delete the selected tables"
+msgstr "Eliminar as tabelas seleccionadas"
+
+#: src/metastore/templates/tables.mako:62
+msgid "Table Name"
+msgstr "Nome da tabela"
+
+#: src/metastore/templates/util.mako:66
+msgid "Unsaved Query"
+msgstr "Consulta não guardada"
+
+#: src/metastore/templates/util.mako:71
+msgid "Query Results"
+msgstr "Resultados da consulta"
+
+#: src/metastore/templates/popups/load_data.mako:25
+msgid "Import data"
+msgstr "Importar dados"
+
+#: src/metastore/templates/popups/load_data.mako:50
+msgid "Overwrite existing data"
+msgstr "Substituir os dados existentes"
+
+#: src/metastore/templates/popups/load_data.mako:55
+msgid ""
+"Note that loading data will move data from its location into the table's "
+"storage location."
+msgstr ""
+"Note que o carregamento dos dados moverá os dados do seu local para o "
+"local de armazenamento na tabela."
+
+#: src/metastore/templates/popups/load_data.mako:61
+msgid "Submit"
+msgstr "Enviar"
+

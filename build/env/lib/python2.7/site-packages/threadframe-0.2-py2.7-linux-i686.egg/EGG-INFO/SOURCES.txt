@@ -1,0 +1,7 @@
+README
+setup.py
+threadframemodule.c
+threadframe.egg-info/PKG-INFO
+threadframe.egg-info/SOURCES.txt
+threadframe.egg-info/dependency_links.txt
+threadframe.egg-info/top_level.txt

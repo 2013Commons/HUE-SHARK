@@ -1,0 +1,9 @@
+#!/home/ahll/Escritorio/shark-Hue/hue-2.5.0/build/env/bin/python2.7
+# EASY-INSTALL-ENTRY-SCRIPT: 'desktop==2.5.0','console_scripts','supervisor'
+__requires__ = 'desktop==2.5.0'
+import sys
+from pkg_resources import load_entry_point
+
+sys.exit(
+   load_entry_point('desktop==2.5.0', 'console_scripts', 'supervisor')()
+)
